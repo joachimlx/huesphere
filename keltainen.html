@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keltainen</title>
+    <link rel="icon" href="HUESphere_logo_small.png" type="image/png">
+
+    <link rel="stylesheet" href="tyylit.css"> <!-- Ulkoisen CSS-tiedoston linkki -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- FONTIT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="gradient-header"></div>
+
+    <header class="top-header">
+        <a href="index.html">
+            <img class="top-left-image" src="HUESphere_HeaderLogo.png" alt="HUESphere Logo">
+        </a>
+
+        <!-- Hampurilaiskuvake -->
+        <div id="hamburger-menu" class="hamburger" onclick="toggleMenu()">
+            <img src="hamburger-menu.png" alt="Menu" />
+        </div>
+
+        <!-- Mobiilivalikko -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Etusivu</a>
+            <a href="varivalikko.html">Värivalikko</a>
+            <div class="language-icons">
+                <div class="language-icon">
+                    <img src="finland.png" alt="Finnish">
+                </div>
+                <div class="language-icon">
+                    <img src="united-kingdom.png" alt="English">
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-menu funnel-sans-leipateksti">
+            <nav class="navbar">
+                <a href="index.html" class="navbarteksti">Etusivu</a>
+                <a href="varivalikko.html" class="navbarteksti">Värivalikko</a>
+                <a href="index.html" class="circle-link">
+                    <img src="finland.png" alt="suomen kieli">
+                </a>
+                <a href="#" class="circle-link">
+                    <img src="united-kingdom.png" alt="englannin kieli">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SISÄLTÖ -->
+
+    <div class="search-bar-left">
+        <input type="text" placeholder="Hae..." />
+        <i class="fa fa-search"></i>
+    </div>
+
+    <div class="varivalikko-sivu">
+
+        <div class="savy-tekstimuotoilu">
+            <h1>Keltainen</h1>
+            <p>Tässä osiossa ehdotetut värit on korvattu täysin satunnaisilla väreillä, jotta klikatun värin väriyhdistelmät olisivat monipuolisemmat.</p>
+            <p>Klikkaamalla samaa väriä monta kertaa pääset generoimaan väriehdotukset uudelleen.</p>
+        </div>
+
+        <div class="swatch-container-savy">
+
+        </div>
+
+    </div>
+    
+
+    <script src="keltainen.js"></script>
+
+    <footer class="bottom-footer">
+        <a href="index.html">
+            <img class="bottom-left-image" src="HUESphere_logo_White.png" alt="HUESphere Logo White">
+        </a>
+
+        <div class="footer-text">
+            <h1>Värisuunnittelun uusi ulottuvuus.</h1>
+            <p>© HUE Sphere by Joachim Alexa</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
