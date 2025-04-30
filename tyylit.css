@@ -8,10 +8,6 @@ body {
 
 }
 
-html {
-    overflow-x: hidden; /* Estää vaakasuuntaisen vierityksen */
-}
-
 .varivalikko-sivu {
     text-align: left;
     margin-left: 70px;
