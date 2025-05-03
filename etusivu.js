@@ -15,14 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     container.style.position = "absolute"; // Varmistaa, että elementti voi liikkua
     moveText(); // Käynnistää animaation
-});
 
+    // Hamburger menu logic (moved here)
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navMenu = document.querySelector('.nav-menu');
 
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const navMenu = document.querySelector('.nav-menu');
+    if (hamburgerMenu && navMenu) {
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    }
 
-hamburgerMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
 });
 
 
