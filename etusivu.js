@@ -49,7 +49,7 @@ function generateColors() {
     const container = document.getElementById('color-container');
     container.innerHTML = ''; // Tyhjennetään vanhat värit
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         const color = getRandomColor();
         const colorItem = document.createElement('div');
         colorItem.className = 'color-item';
