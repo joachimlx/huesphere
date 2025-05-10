@@ -38,6 +38,19 @@ function handleKey(event) {
     }
 }
 
+//HAKUPALKIN TOIMINNALLISUUS
+
+const colorPages = {
+    punainen: "punainen.html",
+    oranssi: "oranssi.html",
+    keltainen: "keltainen.html",
+    vihreä: "vihrea.html",
+    sininen: "sininen.html",
+    violetti: "violetti.html",
+    pinkki: "pinkki.html",
+    ruskea: "ruskea.html"
+};
+
 // Taulukko väreistä
 const colors = [
     { name: "Indigo", hex: "#4b0082" },

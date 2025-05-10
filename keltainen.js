@@ -5,6 +5,19 @@ hamburgerMenu.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
+//HAKUPALKIN TOIMINNALLISUUS
+
+const colorPages = {
+    punainen: "punainen.html",
+    oranssi: "oranssi.html",
+    keltainen: "keltainen.html",
+    vihreä: "vihrea.html",
+    sininen: "sininen.html",
+    violetti: "violetti.html",
+    pinkki: "pinkki.html",
+    ruskea: "ruskea.html"
+};
+
 function searchColor() {
     const input = document.getElementById("searchInput").value.toLowerCase().trim();
     
