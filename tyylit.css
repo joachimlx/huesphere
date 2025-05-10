@@ -714,6 +714,7 @@ h5 {
 
     body {
         overflow-x: hidden;
+        max-width: 430px;
       }
 
     .funnel-display-otsikko {
