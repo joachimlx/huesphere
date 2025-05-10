@@ -194,7 +194,7 @@ function getComplementaryColor(hex) {
 // ANALOGISEN VÄRIN HAKU
 function getAnalogousColor(hex) {
     const hsl = hexToHSL(hex);
-    hsl.h = (hsl.h + 30) % 360; // Siirtyy 30 astetta
+    hsl.h = (hsl.h + 200) % 360; // Siirtyy 30 astetta
     return hslToHex(hsl);
 }
 

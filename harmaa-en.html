@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White</title>
+    <link rel="icon" href="HUESphere_logo_small.png" type="image/png">
+
+    <link rel="stylesheet" href="tyylit.css"> <!-- Ulkoisen CSS-tiedoston linkki -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- FONTIT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="gradient-header"></div>
+
+    <header class="top-header">
+        <a href="index-en.html">
+            <img class="top-left-image" src="HUESphere_HeaderLogo.png" alt="HUESphere Logo">
+        </a>
+
+        <!-- Hampurilaiskuvake -->
+        <div id="hamburger-menu" class="hamburger" onclick="toggleMenu()">
+            <img src="hamburger-menu.png" alt="Menu" />
+        </div>
+
+        <!-- Mobiilivalikko -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index-en.html">Home page</a>
+            <a href="varivalikko-en.html">Color menu</a>
+            <div class="language-icons">
+                <div class="language-icon">
+                    <img src="finland.png" alt="Finnish">
+                </div>
+                <div class="language-icon">
+                    <img src="united-kingdom.png" alt="English">
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-menu funnel-sans-leipateksti">
+            <nav class="navbar">
+                <a href="index-en.html" class="navbarteksti">Home page</a>
+                <a href="varivalikko-en.html" class="navbarteksti">Color menu</a>
+                <a href="harmaa.html" class="circle-link">
+                    <img src="finland.png" alt="finnish">
+                </a>
+                <a href="harmaa-en.html" class="circle-link">
+                    <img src="united-kingdom.png" alt="english">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SISÄLTÖ -->
+
+    <div class="search-bar-left">
+        <input type="text" id="searchInput" placeholder="Search..." onkeydown="handleKey(event)" />
+        <i class="fa fa-search" onclick="searchColor()"></i>
+    </div>
+
+    <div class="varivalikko-sivu">
+
+        <div class="savy-tekstimuotoilu">
+            <h1>Grey</h1>
+            <p>In this section, the suggested colors have been completely replaced with random colors to make the color combinations of the selected color more diverse.</p>
+            <p>By clicking the same color multiple times, you can regenerate the color suggestions.</p>
+        </div>
+
+        <div class="swatch-container-savy">
+
+        </div>
+
+    </div>
+
+
+    <script src="harmaa.js"></script>
+
+    <footer class="bottom-footer">
+        <a href="index-en.html">
+            <img class="bottom-left-image" src="HUESphere_logo_White.png" alt="HUESphere Logo White">
+        </a>
+
+        <div class="footer-text">
+            <h1>A new dimension of color design.</h1>
+            <p>© HUE Sphere by Joachim Alexa</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
