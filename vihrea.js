@@ -22,6 +22,22 @@ function toggleMenu() {
     }
 }
 
+function searchColor() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+    
+    if (colorPages[input]) {
+        window.location.href = colorPages[input]; // ohjaa värin omaan sivuun
+    } else {
+        alert("Väriä ei löytynyt. Syötä jonkin perusvärin nimi.");
+    }
+}
+
+function handleKey(event) {
+    if (event.key === "Enter") {
+        searchColor();
+    }
+}
+
 // Taulukko väreistä
 const colors = [
     { name: "Thyme", hex: "#5edc1f" },

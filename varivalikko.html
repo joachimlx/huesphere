@@ -65,8 +65,8 @@
     <!-- SISÄLTÖ -->
 
     <div class="search-bar-left">
-        <input type="text" placeholder="Hae..." />
-        <i class="fa fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Hae..." onkeydown="handleKey(event)" />
+        <i class="fa fa-search" onclick="searchColor()"></i>
     </div>
 
     <div class="varivalikko-sivu">

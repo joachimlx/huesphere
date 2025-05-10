@@ -5,6 +5,22 @@ hamburgerMenu.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
+function searchColor() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+    
+    if (colorPages[input]) {
+        window.location.href = colorPages[input]; // ohjaa värin omaan sivuun
+    } else {
+        alert("Väriä ei löytynyt. Syötä jonkin perusvärin nimi.");
+    }
+}
+
+function handleKey(event) {
+    if (event.key === "Enter") {
+        searchColor();
+    }
+}
+
 
 function toggleMenu() {
     const menu = document.getElementById('mobileMenu');

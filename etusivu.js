@@ -45,6 +45,38 @@ function toggleMenu() {
     }
 }
 
+
+//HAKUPALKIN TOIMINNALLISUUS
+
+const colorPages = {
+    punainen: "punainen.html",
+    oranssi: "oranssi.html",
+    keltainen: "keltainen.html",
+    vihreä: "vihrea.html",
+    sininen: "sininen.html",
+    violetti: "violetti.html",
+    pinkki: "pinkki.html",
+    ruskea: "ruskea.html"
+};
+
+function searchColor() {
+    const input = document.getElementById("searchInput").value.toLowerCase().trim();
+    
+    if (colorPages[input]) {
+        window.location.href = colorPages[input]; // ohjaa värin omaan sivuun
+    } else {
+        alert("Väriä ei löytynyt. Syötä jonkin perusvärin nimi.");
+    }
+}
+
+function handleKey(event) {
+    if (event.key === "Enter") {
+        searchColor();
+    }
+}
+
+
+
 function generateColors() {
     const container = document.getElementById('color-container');
     container.innerHTML = ''; // Tyhjennetään vanhat värit
@@ -207,40 +239,3 @@ function hslToHex({ h, s, l }) {
     const toHex = val => Math.round((val + m) * 255).toString(16).padStart(2, '0');
     return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
 }
-
-
-/* document.querySelectorAll('.color-box-savy').forEach(box => {
-    box.addEventListener('click', function () {
-        const allSwatches = Array.from(document.querySelectorAll('.swatch-savy'));
-        const clickedSwatch = this.parentElement;
-        const clickedTop = clickedSwatch.offsetTop;
-
-        // Poista aiemmat variehdotus-divit
-        document.querySelectorAll('.variehdotus').forEach(el => el.remove());
-
-        // Etsi kaikki swatchit, jotka ovat samalla rivillä
-        const sameRow = allSwatches.filter(swatch => swatch.offsetTop === clickedTop);
-
-        // Viimeinen samaan riviin kuuluva elementti
-        const lastInRow = sameRow[sameRow.length - 1];
-
-        // Luo ja lisää uusi div
-        const ehdotusDiv = document.createElement('div');
-        ehdotusDiv.className = 'variehdotus';
-
-        // Hae klikattavan värin nimi ja heksakoodi
-        const variNimi = clickedSwatch.querySelector('h4').textContent;
-        const variKoodi = clickedSwatch.querySelector('p').textContent;
-
-        // Lisää sisältö uuteen diviin
-        ehdotusDiv.innerHTML = `
-        <h4>Väriyhdistelmät värille ${variNimi} (${variKoodi})</h4>
-        <p>Tähän voit lisätä esim. komplementtivärin, vaaleamman sävyn tai tummemman sävyn.</p>
-        `;
-
-        ehdotusDiv.style.width = '100%'; // vie koko rivin leveyden
-
-        // Lisää div viimeisen rivin jäsenen jälkeen
-        lastInRow.parentNode.insertBefore(ehdotusDiv, lastInRow.nextSibling);
-    });
-});*/

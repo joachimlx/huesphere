@@ -110,8 +110,8 @@
     <p style="text-align:center; font-size:large">Etsitkö jotain väriä?</p>
     <!-- Hakupalkki -->
     <div class="search-container">
-        <input type="text" placeholder="Hae..." />
-        <i class="fa fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Hae..." onkeydown="handleKey(event)" />
+        <i class="fa fa-search" onclick="searchColor()"></i>
     </div>
 
     <h1 style="text-align:center; margin-top: 100px;">Esittelyssä:</h1>
