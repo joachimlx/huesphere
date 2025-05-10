@@ -56,7 +56,15 @@ const colorPages = {
     sininen: "sininen.html",
     violetti: "violetti.html",
     pinkki: "pinkki.html",
-    ruskea: "ruskea.html"
+    ruskea: "ruskea.html",
+    red: "punainen-en.html",
+    orange: "oranssi-en.html",
+    yellow: "keltainen-en.html",
+    green: "vihrea-en.html",
+    blue: "sininen-en.html",
+    purple: "violetti-en.html",
+    pink: "pinkki-en.html",
+    brown: "ruskea-en.html"
 };
 
 function searchColor() {
