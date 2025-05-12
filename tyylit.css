@@ -321,10 +321,18 @@ h5 {
 }
 
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-40px); }
-    100% { transform: translateY(0); }
-  }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 .swatch-varivalikko {
     display: inline-block;
@@ -455,8 +463,10 @@ h5 {
 
 .label-savy h4 {
     font-weight: 600;
-    word-wrap: break-word; /* Varmistaa, että pitkä teksti menee seuraavalle riville */
-    overflow-wrap: break-word; /* Varmistaa, että pitkä teksti menee seuraavalle riville */
+    word-wrap: break-word;
+    /* Varmistaa, että pitkä teksti menee seuraavalle riville */
+    overflow-wrap: break-word;
+    /* Varmistaa, että pitkä teksti menee seuraavalle riville */
 }
 
 
@@ -743,7 +753,7 @@ h5 {
 
     body {
         overflow-x: hidden;
-      }
+    }
 
     .funnel-display-otsikko {
         font-size: 30px;
@@ -841,14 +851,14 @@ h5 {
         /* Näkyvä */
     }
 
-    .mobile-menu a {
+    .mobile-menu a:not(.circle-link) {
         color: black;
         background-color: white;
         text-decoration: none;
         display: block;
         text-align: center;
         font-size: medium;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Funnel Sans", sans-serif;
         /* Tai mitä tahansa käytätkin */
         border-radius: 20px 20px;
         transition: transform 0.2s, border 0.2s;
@@ -861,7 +871,7 @@ h5 {
     }
 
     /* Reunusefekti */
-    .mobile-menu a::before {
+    .mobile-menu a:not(.circle-link)::before {
         content: '';
         position: absolute;
         inset: 0;
@@ -893,18 +903,36 @@ h5 {
         gap: 10px;
     }
 
-    .language-icon {
-        width: 45px;
-        height: 45px;
+    .circle-link {
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        padding: 2px;
-        background: white;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        box-sizing: border-box;
         position: relative;
         z-index: 0;
         transition: transform 0.2s;
     }
 
-    .language-icon::before {
+    .circle-link img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Kuva pysyy ympyrän muotoisena eikä veny */
+        display: block;
+        /* Poistaa ylimääräiset välit kuvan ympäriltä */
+        border-radius: 50%;
+    }
+
+    .circle-link:hover {
+        transform: scale(1.1);
+    }
+
+    .circle-link::before {
         content: '';
         position: absolute;
         inset: 0;
@@ -922,20 +950,8 @@ h5 {
         z-index: -1;
     }
 
-    .language-icon:hover::before {
+    .circle-link:hover::before {
         opacity: 1;
-    }
-
-    .language-icon:hover {
-        transform: scale(1.1);
-    }
-
-    .language-icon img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        padding: 6px;
     }
 
     .color-box {
@@ -992,7 +1008,7 @@ h5 {
         display: flex;
         gap: 25px;
     }
-    
+
 
     .search-container input {
         width: 270px;
@@ -1137,8 +1153,10 @@ h5 {
 
     .label-savy h4 {
         font-size: small;
-        word-wrap: break-word; /* Varmistaa, että pitkä teksti menee seuraavalle riville */
-        overflow-wrap: break-word; /* Varmistaa, että pitkä teksti menee seuraavalle riville */
+        word-wrap: break-word;
+        /* Varmistaa, että pitkä teksti menee seuraavalle riville */
+        overflow-wrap: break-word;
+        /* Varmistaa, että pitkä teksti menee seuraavalle riville */
     }
 
     .label-savy p {
@@ -1160,7 +1178,8 @@ h5 {
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 15px 20px;
-        flex-basis: 85%; /* Vie koko rivin leveyden */
+        flex-basis: 85%;
+        /* Vie koko rivin leveyden */
     }
 
     .color-row {
@@ -1176,7 +1195,7 @@ h5 {
         margin-right: 30px;
         margin-left: 30px;
     }
-    
+
 
 }
 
@@ -1234,8 +1253,9 @@ h5 {
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 10px;
-        box-shadow: 0 0 5px rgba(0,0,0,0.1);
-        flex-basis: 100%; /* Vie koko rivin leveyden */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        flex-basis: 100%;
+        /* Vie koko rivin leveyden */
         margin-right: 60px;
     }
 
@@ -1300,7 +1320,7 @@ h5 {
         justify-content: left;
         /* Keskittää värit sivulla */
         flex-wrap: wrap;
-        margin-right:300px;
+        margin-right: 300px;
     }
 
     .extra-info {
@@ -1310,7 +1330,8 @@ h5 {
         margin-top: 15px;
         margin-bottom: 15px;
         border-radius: 20px 20px;
-        flex-basis: 100%; /* Vie koko rivin leveyden */
+        flex-basis: 100%;
+        /* Vie koko rivin leveyden */
         margin-right: 60px;
     }
 
